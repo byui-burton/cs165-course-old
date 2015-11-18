@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 165 - Ponder and Prove - Programming Assignment</title>
+    <link rel="stylesheet" type="text/css" href="../course/style.css" />
+</head>
+
+<body>
+    <div id= "main" class="splash">
+        <div id="header">
+            <img class="banner" alt="CS 165 Banner" title="CS 165 Banner" src="../course/cs165.jpg" />
+        </div>
+
+        <article>
+
+        <h1>02 Prove : Assignment - Digital Forensics</h1>
+
+
+        <h2>Overview</h2>
+        <p>ACME Widget Corporation just experienced their first digital security breach. One of their secret widget designs just appeared on the Internet. Now they've hired you as a digital forensics investigator to help determine what additional data might have been involved in the breach.</p>
+        <p>One of the first steps in digital forensics is to inspect system logs, particularly file access and user account logs. To assist you in this investigation, you've been given a log from ACME's network server that contains a list of file access times and the users that accessed them.</p>
+
+        <p>Write a program to scan through that log to identify users who accessed files in a particular window of time.</p>
+
+
+        <h2>Instructions</h2>
+            <p>
+                Write a C++ program according to the following:
+
+                <ol>
+                    <li>Create a struct for a Date that holds a year, month, and day.</li>
+                    <li>Create a struct for an Access Record that contains a username, a filename, and an access Date (i.e., a Date struct).</li>
+                    <li>Prompt the user for the name of a file.</li>
+                    <li>Read in a list of Access Records from the file and store it in an array of structs.</li>
+                    <li>Prompt the user for a start date and an end date for consideration.</li>
+                    <li>Display a list of all files that were accessed during that period along with the users that accessed them.</li>
+                    <li>For this assignment you may assume that the information entered is all valid</li>
+                    <li>Don't forget to break your program into meaningful, cohesive functions!</li>
+                </ol>
+            </p>
+
+            <p>A few hints</p>
+            <ul>
+                <li>A common technique for comparing custom items is to create a function, such as compareDate, that takes two Date structs and returns -1 if the first one comes before the second, 0 if they are equal, and 1 if the first comes after the second.</li>
+                <li>It is also common to create a function, such as displayRecord, that would take a struct and display it in a proper format.</li>
+                <li>Get started early, there are a few tricky aspects to this assignment.</li>
+            </ul>
+        <h2>Sample Output</h2>
+        <p>
+            The following is an example of output for this program:
+        </p>
+        <div class="code">
+Enter the access record file: <span class="user-input">/home/cs165new/assign02a.txt</span>
+
+Enter the start date:
+Year: <span class="user-input">2015</span>
+Month: <span class="user-input">8</span>
+Day: <span class="user-input">3</span>
+
+Enter the end date:
+Year: <span class="user-input">2015</span>
+Month: <span class="user-input">9</span>
+Day: <span class="user-input">2</span>
+
+The following records match your criteria:
+
+Date            File                 User
+--------------- -------------------- --------------------
+2015-8-15       house.pdf            jatkins
+2015-8-17       users.txt            kevin_tomlinson
+2015-8-17       accounts.mdb         kevin_tomlinson
+2015-8-21       vacation.jpg         smitty83
+</div>
+
+        <h2>Helpful Commands</h2>
+
+<div class="code">cp /home/cs165new/template.cpp myAssign02.cpp</div>
+<div class="code">testBed cs165new/assign02 myAssign02.cpp</div>
+<div class="code">styleChecker myAssign02.cpp</div>
+<div class="code">submit myAssign02.cpp</div>
+
+
+        </article>
+    </div>
+
+
+</body>
+
+</html>
